@@ -8,8 +8,8 @@ $data = $_POST['user'] ?? []; // PHP 7
 $errors = []; //Создаем пустой массив
 $user = []; //Создаем пустой массив
 //$id = $data['user'] ?? $_GET['user']; //Получаем введенный идент. Если нет то из GET
-//проверка на существование
 
+//проверка на существование
 /*if ($id) {
     $user = userGetById((int) $id);
 
@@ -22,14 +22,13 @@ $user = []; //Создаем пустой массив
 // отправлен
 if ($data) {
     $user = userSave($data);
-
+var_dump($user);
     if (!$errors) {
         header('location: registration.php?user=' . $user['user']);
         exit;
     }
 //всплывающее сообшщение с ошибками
 }
-
 ?>
 
 <?php include  __DIR__ . '/../app/views/layout/header.php'; ?>
@@ -48,7 +47,7 @@ if ($data) {
     <input type="hidden" name="user['user']" value="<?= $user['user'] ?>">
     <?php endif; ?>
     <div>
-        <input type="submit" value="htubcnhfwbz">
+        <input type="submit" value="регистрация">
     </div>
 </form>
 
