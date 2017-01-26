@@ -7,17 +7,17 @@ require_once __DIR__ . '/../init.php';
 $data = $_POST['user'] ?? []; // PHP 7
 $errors = []; //Создаем пустой массив
 $user = []; //Создаем пустой массив
-$id = $data['user'] ?? $_GET['user']; //Получаем введенный идент. Если нет то из GET
+//$id = $data['user'] ?? $_GET['user']; //Получаем введенный идент. Если нет то из GET
 //проверка на существование
 
-if ($id) {
+/*if ($id) {
     $user = userGetById((int) $id);
 
     if (!$user) {
         header($_SERVER['SERVER_PROTOCOL'] .  '404');
         exit ('Юзер не найден');
     }
-}
+}*/
 
 // отправлен
 if ($data) {
